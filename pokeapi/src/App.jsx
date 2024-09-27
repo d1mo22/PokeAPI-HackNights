@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPokemon } from "./services";
 import "./App.css";
+import Card from "./Card.jsx";
 
 const getTypeColor = (type) => {
 	const typeColors = {
