@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPokemon } from "./services";
 import "./App.css";
-import Card from "./Card.jsx";
+import Card from "./Card";
 
 const getTypeColor = (type) => {
 	const typeColors = {
@@ -44,11 +44,16 @@ function App() {
 	const [pokemon, setPokemon] = useState(null);
 	useEffect(() => {
 		const fetchPokemon = async () => {
+			const promises = [];
+			for (let i = 1; i <= 151; i++) {
+				promises.push(getPokemon(i));
+			}
 			const data = await getPokemon(1);
 			setPokemon(data);
 		};
 		fetchPokemon();
 	}, []);
+
 	return (
 		<>
 			<div className="grid-container">
@@ -57,10 +62,11 @@ function App() {
 						className="grid-item"
 						style={{ background: getGradient(pokemon.types) }}
 					>
-						<h1>{pokemon.name}</h1>
+						<h1>{uppercaseFirstLetter(pokemon.name)}</h1>
 						<p>{pokemon.types.join(" ")}</p>
 					</div>
 				)}
+				<Card />
 			</div>
 		</>
 	);
