@@ -34,8 +34,3 @@ body { padding: 1rem; }
   }
 }
 
-@media (min-width: 1200px) {
-  .grid-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}

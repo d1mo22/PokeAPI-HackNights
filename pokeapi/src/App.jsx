@@ -41,32 +41,33 @@ const getGradient = (types) => {
 };
 
 function App() {
-	const [pokemon, setPokemon] = useState(null);
+	const [pokemon, setPokemons] = useState([]);
+
 	useEffect(() => {
-		const fetchPokemon = async () => {
+		const fetchPokemons = async () => {
 			const promises = [];
 			for (let i = 1; i <= 151; i++) {
 				promises.push(getPokemon(i));
 			}
-			const data = await getPokemon(1);
-			setPokemon(data);
+			const results = await Promise.all(promises);
+			setPokemons(results);
 		};
-		fetchPokemon();
+		fetchPokemons();
 	}, []);
 
 	return (
 		<>
 			<div className="grid-container">
-				{pokemon && (
+				{pokemon.map((pokemon) => (
 					<div
-						className="Card"
+						key={pokemon.id}
+						className="grid-item"
 						style={{ background: getGradient(pokemon.types) }}
 					>
 						<h1>{uppercaseFirstLetter(pokemon.name)}</h1>
-						<p>{pokemon.types.join(" ")}</p>
+						<p>{pokemon.types.map(uppercaseFirstLetter).join(" ")}</p>
 					</div>
-				)}
-				<Card />
+				))}
 			</div>
 		</>
 	);
