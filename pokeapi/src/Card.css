@@ -1,0 +1,51 @@
+.Card {
+    background-color: #bcc2da;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    font-size: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: black;
+    cursor: pointer;
+    font-family: cursive;
+    display: inline-block;
+}
+
+.Card h3., .Card p {
+    margin: 5px 0;
+    padding: 0
+}
+
+.Card::before {
+    content:"";
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+    background-size:200% 200%;
+    z-index: -1;
+    animation: brillar 2s infinite linear;  /*Brillar infinito*/
+}
+
+@keyframes brillar {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
