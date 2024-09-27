@@ -59,7 +59,7 @@ function App() {
 			<div className="grid-container">
 				{pokemon && (
 					<div
-						className="grid-item"
+						className="Card"
 						style={{ background: getGradient(pokemon.types) }}
 					>
 						<h1>{uppercaseFirstLetter(pokemon.name)}</h1>
