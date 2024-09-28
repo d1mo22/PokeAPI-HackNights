@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import { getPokemon } from "./services";
 import "./App.css";
 import PokemonGrid from "./PokemonGrid";
-import { getGradient, capitalizeFirstLetter } from "./services/utils";
 
 function App() {
-	const [pokemon, setPokemons] = useState([]);
+	const [pokemons, setPokemons] = useState([]);
 
 	useEffect(() => {
 		const fetchPokemons = async () => {
