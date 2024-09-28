@@ -8,3 +8,4 @@ This application is an implementation of the PokeAPI, designed to provide detail
 - **User-Friendly Interface**: Designed with an intuitive and easy-to-use user interface.
 
 This application is ideal for Pokémon enthusiasts who want quick access to detailed information about their favorite Pokémon.
+> **Note**: Currently, only Pokémon from the first generation are available.
