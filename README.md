@@ -1,8 +1,10 @@
-# React + Vite
+## ¿Qué hace esta aplicación?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación es una implementación de la PokeAPI, diseñada para proporcionar información detallada sobre Pokémon. Utiliza React junto con Vite para ofrecer una experiencia de usuario rápida y eficiente. Algunas de las características clave incluyen:
 
-Currently, two official plugins are available:
+- **Búsqueda de Pokémon**: Permite a los usuarios buscar información sobre cualquier Pokémon por nombre o número de Pokédex.
+- **Detalles del Pokémon**: Muestra información detallada sobre cada Pokémon, incluyendo estadísticas, habilidades y tipos.
+- **Lista de Pokémon**: Proporciona una lista paginada de todos los Pokémon disponibles en la PokeAPI.
+- **Interfaz amigable**: Diseñada con una interfaz de usuario intuitiva y fácil de usar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Esta aplicación es ideal para los entusiastas de Pokémon que desean acceder rápidamente a información detallada sobre sus Pokémon favoritos.
