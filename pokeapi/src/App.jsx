@@ -20,8 +20,11 @@ function App() {
 
 	return (
 		<>
+		<div>
+			
+			</div>
 			<PokemonGrid pokemons={pokemons} />
-		</>
+		</>	
 	);
 }
 
