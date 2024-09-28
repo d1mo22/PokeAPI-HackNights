@@ -59,3 +59,42 @@
   }
 }
 
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /*Allow buttons to go in differents rows*/
+  justify-content: center; /*Center buttons horitzontally*/
+}
+
+.btn {
+  background-color: #5eacff;
+  color: black; /*Color text */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px; /*Inside space */
+  margin: 5px; /*Space between buttons */
+  font-size: 16 px;
+  cursor: pointer;
+  transition: background-color 0.3s;  /*Transition effect in the colour change */
+}
+
+.btn:hover {
+  background-color:#1157a0;
+  color: ghostwhite;
+}
+
+.btn.pulsed {
+  background-color:#1157a0;
+  color: ghostwhite;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px; /*Inside space */
+  margin: 5px; /*Space between buttons */
+  font-size: 16 px;
+  cursor: pointer;
+  transition: background-color 0.3s;  /*Transition effect in the colour change */
+}
+
+.btn.pulsed:hover {
+  background-color: #5eacff;
+  color: black; /*Color text */
+}
