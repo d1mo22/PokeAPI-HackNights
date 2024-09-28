@@ -1,18 +1,13 @@
 .Card {
     background-color: #bcc2da;
-    height: auto;
-    width: auto;
     padding: 20px;
     margin: 20px;
     position: relative;
     border-radius: 20px;
     border: 2px solid transparent;
-    font-size: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    color: black;
-    cursor: pointer;
-    font-family: cursive;
+    color: ghostwhite;
     display: inline-block;
 }
 
