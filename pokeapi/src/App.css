@@ -89,7 +89,7 @@ p {
   transition: background-color 0.3s;  /*Transition effect in the colour change */
 }
 
-.btn:hover {
+.btn:hover, .btn-check{
   background-color:#1157a0;
   color: ghostwhite;
 }
@@ -104,9 +104,4 @@ p {
   font-size: 16 px;
   cursor: pointer;
   transition: background-color 0.3s;  /*Transition effect in the colour change */
-}
-
-.btn.pulsed:hover {
-  background-color: #5eacff;
-  color: black; /*Color text */
 }

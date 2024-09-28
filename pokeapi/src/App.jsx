@@ -3,12 +3,9 @@ import { getPokemon } from "./services";
 import "./App.css";
 import PokemonGrid from "./PokemonGrid";
 
-function handleButtonClick(button) {
-	button.classList.toggle('pulsado'); /*If the button is pulsed it is going to add this state, otherwise it will delete the state, making the alternation between the two states */
-}
-
 function App() {
 	const [pokemons, setPokemons] = useState([]);
+	const [button, setButton] = useState(false);
 
 	useEffect(() => {
 		const fetchPokemons = async () => {
@@ -32,9 +29,29 @@ function App() {
 					rel="stylesheet"
 				/>
 			</head>
-		<div class="button-container">
-			<button class="btn" onClick={ () => handleButtonClick(this)}>Fire</button>
-		</div>
+			<div class="button-container">
+				<button
+					type="button"
+					className={`btn ${button ? "btn-check" : "btn"}`}
+					onClick={() => {
+						setButton(!button);
+						setFilter("fire");
+					}}
+				>
+					Fire
+				</button>
+
+				<button
+					type="button"
+					className={`btn ${button ? "btn-check" : "btn"}`}
+					onClick={() => {
+						setButton(!button);
+						setFilter("water");
+					}}
+				>
+					Water
+				</button>
+			</div>
 			<PokemonGrid pokemons={pokemons} />
 		</>
 	);
