@@ -1,9 +1,20 @@
+@font-face {
+  font-family: 'Early GameBoy';
+  src: url('/fonts/Early_GameBoy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 #root {
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'Press Start 2P';
+}
+
+p {
+  font-size: .8rem;
 }
 
 .grid-container {

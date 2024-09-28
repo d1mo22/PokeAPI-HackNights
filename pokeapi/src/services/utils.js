@@ -28,7 +28,7 @@ export const getGradient = (types) => {
 	}
 	const color1 = getTypeColor(types[0]);
 	const color2 = getTypeColor(types[1]);
-	return `linear-gradient(67deg, ${color1}, ${color2})`;
+	return `linear-gradient(to right, ${color1}, ${color2})`;
 };
 
 export const capitalizeFirstLetter = (string) => {
