@@ -1,10 +1,10 @@
-## ¿Qué hace esta aplicación?
+## What does this application?
 
-Esta aplicación es una implementación de la PokeAPI, diseñada para proporcionar información detallada sobre Pokémon. Utiliza React junto con Vite para ofrecer una experiencia de usuario rápida y eficiente. Algunas de las características clave incluyen:
+This application is an implementation of the PokeAPI, designed to provide detailed information about Pokémon. It uses React along with Vite to offer a fast and efficient user experience. Some of the key features include:
 
-- **Búsqueda de Pokémon**: Permite a los usuarios buscar información sobre cualquier Pokémon por nombre o número de Pokédex.
-- **Detalles del Pokémon**: Muestra información detallada sobre cada Pokémon, incluyendo estadísticas, habilidades y tipos.
-- **Lista de Pokémon**: Proporciona una lista paginada de todos los Pokémon disponibles en la PokeAPI.
-- **Interfaz amigable**: Diseñada con una interfaz de usuario intuitiva y fácil de usar.
+- **Pokémon Search**: Allows users to search for information about any Pokémon by name or Pokédex number.
+- **Pokémon Details**: Displays detailed information about each Pokémon, including stats, abilities, and types.
+- **Pokémon List**: Provides a paginated list of all available Pokémon in the PokeAPI.
+- **User-Friendly Interface**: Designed with an intuitive and easy-to-use user interface.
 
-Esta aplicación es ideal para los entusiastas de Pokémon que desean acceder rápidamente a información detallada sobre sus Pokémon favoritos.
+This application is ideal for Pokémon enthusiasts who want quick access to detailed information about their favorite Pokémon.
