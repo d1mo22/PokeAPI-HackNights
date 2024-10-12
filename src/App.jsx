@@ -5,7 +5,15 @@ import PokemonGrid from "./PokemonGrid";
 
 function App() {
 	const [pokemons, setPokemons] = useState([]);
+	const [filteredPokemons, setFilteredPokemons] = useState(pokemons);
 	const [button, setButton] = useState(false);
+
+	function setFilter(type) { 
+		let filtered = pokemons;
+		if (type !== "allPokemons") filtered = pokemons.filter((pokemon) => pokemon.types.includes(type));
+		console.log('Filtered Pokemons:', filtered)
+		setFilteredPokemons(filtered); 
+	}
 
 	useEffect(() => {
 		const fetchPokemons = async () => {
@@ -15,6 +23,7 @@ function App() {
 			}
 			const results = await Promise.all(promises);
 			setPokemons(results);
+			setFilteredPokemons(results);
 		};
 		fetchPokemons();
 	}, []);
@@ -30,6 +39,17 @@ function App() {
 				/>
 			</head>
 			<div class="button-container">
+				<button
+					type="button"
+					className={`btn ${button ? "btn-check" : "btn"}`}
+					onClick={() => {
+						setButton(!button);
+						setFilter("allPokemons");
+					}}
+				>
+					All
+				</button>
+
 				<button
 					type="button"
 					className={`btn ${button ? "btn-check" : "btn"}`}
@@ -52,7 +72,7 @@ function App() {
 					Water
 				</button>
 			</div>
-			<PokemonGrid pokemons={pokemons} />
+			<PokemonGrid pokemons={filteredPokemons} />
 		</>
 	);
 }
